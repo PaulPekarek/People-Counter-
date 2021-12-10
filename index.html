@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="index.css">
+        <titl>People Counter</titl>
     </head>
     <body>
         <h1>People Entered:</h1>
@@ -9,8 +13,15 @@
         <button id="increment-btn" onclick="increment()">INCREMENT</button>
         <button id="decrease-btn" onclick="decrease()">DECREASE</button>
         <button id="save-btn" onclick="save()">SAVE</button>
-        <p id ="save-el">Total People:</p>
+        <p id ="save-el"></p> 
+
+        <form class="submission_form" action="#">
+            <h1>Submission Form</h1>
+            <input id = "save-el" class= "msg" placeholder="total people มีกี่คน" />
+            <button type="submit">Send Report</button>
+        </form>
         <script src="index.js"></script>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
     </body>
 </html>
 
