@@ -22,4 +22,27 @@ save = () => {
     count = 0;
 }
 
+const form = document.querySelector(".submission_form");
 
+//submission form 
+function sendMsg(e) {
+    e.preventDefault();
+const msg = document.querySelector(".msg")
+
+//function send email 
+
+    Email.send({
+            SecureToken : "d1df5eac-2a52-4aca-81fc-ef3ee3f889c8",
+            To : 'pauljpekarek@gmail.com',
+            From: "pauljpekarek@gmail.com",
+            Subject : "Submission Form",
+            Body : msg.value
+            
+        }).then(
+        message => alert(message)
+        );
+}
+
+//add the event listener submit 
+
+form.addEventListener('submit', sendMsg); 
